@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/Profile";
 
 function App() {
+  const handleName = (x) => {
+    alert(x);
+  };
+  const style = { color: "blue", textAlign: "left", margin: "15px" };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style}>
+      <Profile
+        fullname="zainab tarek"
+        profession="programmer"
+        bio="hiiii"
+        handleName={handleName}
+      >
+        https://via.placeholder.com/150
+      </Profile>
+      <hr />
+      <Profile />
     </div>
   );
 }
